@@ -1,0 +1,57 @@
+﻿@model Models.Commentaire.ListCommentaireVM
+
+
+
+<html>
+<head>
+   
+    <style>
+
+
+        form {
+            width: 500px; /* Largeur augmentée */
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box; /* Pour inclure le padding dans la largeur totale */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+            input[type="submit"] {
+                background-color: #4CAF50;
+                color: white;
+                cursor: pointer;
+            }
+
+                input[type="submit"]:hover {
+                    background-color: #45a049;
+                }
+    </style>
+</head>
+<body>
+    <h1>@ViewData["Titre"]</h1>
+    <br />
+    <form asp-controller="Commentaire" asp-action="Create" method="post">
+        <input type="hidden" asp-for="@Model.Idcours" value="10"/>
+       Votre nom: <input asp-for="@Model.Nomuser" />
+      
+       Commentaire:  <textarea asp-for="@Model.Description" class="form-control" rows="3" required></textarea>
+          
+       <br />
+      
+        <input type="submit" value="Ajouter" />
+    </form>
+</body>
+</html>

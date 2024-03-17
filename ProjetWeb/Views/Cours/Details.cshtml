@@ -1,0 +1,35 @@
+﻿@using BLL;
+@model Models.Cours.ListCoursVM
+<head>
+<style>
+    /* Ajoutez des styles personnalisés pour positionner le bouton en haut à droite */
+    #commentaires-btn {
+        position: fixed;
+        top: 70px;
+        right: 10px;
+        z-index: 1000; /* Assurez-vous qu'il est au-dessus du contenu */
+    }
+</style>
+</head>
+<div class="col-md-8 offset-md-2 text-center"> <h1>Titre de cours: @Model.Titre</h1></div>
+<a asp-controller="Commentaire" asp-action="Create" asp-route-id="@Model.Idcours" class="btn btn-primary btn-lg" role="button" aria-disabled="true">Ajouter Un commentaire</a>
+<a asp-controller="Categorie" asp-action="List" asp-route-id="@Model.Idcategorie" class="btn btn-primary btn-lg" role="button" aria-disabled="true">Retourner a la liste</a>
+             <br />
+             <br />
+            <h3> Catégorie: 
+                @{
+                    CoursService BLL = new CoursService();
+                    string categorieName = BLL.Nomcat(Model.Idcours);
+                }
+                @categorieName
+            </h3>
+            <br />
+             <h5>Mots clés/Domaine: </h5>
+            <p>@Model.Description</p>
+            <br />
+            <br />
+            <img src="~/Images/@(Model.Etapes).png" class="img-fluid rounded-start" alt="Contenu du cours">
+       
+
+<!-- Bouton Commentaires en haut à droite -->
+<a id="commentaires-btn" asp-controller="Commentaire" asp-action="List" asp-route-id="@Model.Idcours" class="btn btn-primary btn-lg" role="button" aria-disabled="true">Commentaires</a>

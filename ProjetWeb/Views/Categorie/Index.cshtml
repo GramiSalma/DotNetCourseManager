@@ -1,0 +1,32 @@
+﻿@model List<Models.Categorie.ListCategorieVM>  
+
+<head><style>
+         .custom-title {
+             text-align: center;
+             font-size: 2em; /* Ajustez la taille selon vos besoins */
+             font-family: 'Montserrat', sans-serif; /* Remplacez 'Your Special Font' par le nom de votre police spéciale */
+             /* Ajoutez d'autres styles de police selon vos préférences */
+             margin-top: 20px; /* Ajustez la marge supérieure selon vos besoins */
+         }
+</style>
+</head>
+<div class="container mt-5">
+    <h1 class="custom-title">@ViewData["TitrePage"]</h1>
+    <br />
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        @foreach (var item in Model)
+        {
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">@item.Idcategorie</h5>
+                        <h5 class="card-title">@item.Titrecategorie</h5>
+                        <a asp-controller="Categorie" asp-action="List" asp-route-id="@item.Idcategorie" class="btn btn-primary">Voir le contenu</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+

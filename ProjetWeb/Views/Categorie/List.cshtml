@@ -1,0 +1,39 @@
+﻿@using BLL;
+@model List<Models.Cours.ListCoursVM>
+
+<head><style>
+    .custom-title {
+        text-align: center;
+        font-size: 2em; /* Ajustez la taille selon vos besoins */
+            font-family: 'Montserrat', sans-serif; /* Remplacez 'Your Special Font' par le nom de votre police spéciale */
+        /* Ajoutez d'autres styles de police selon vos préférences */
+        margin-top: 20px; /* Ajustez la marge supérieure selon vos besoins */
+    }
+</style>
+</head>
+<div class="container mt-5">
+    <h1 class="custom-title">@ViewData["TitrePage"]</h1>
+    <br />
+    <div class="container text-center">
+    <a asp-controller="Categorie" asp-action="Index"  class="btn btn-primary btn-lg" role="button" aria-disabled="true">Retourner au categories</a> </div>
+    <br />
+    <div class="container text-center">
+    <h3>@ViewData["null"]</h3> </div>
+    
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        @foreach (var item in Model)
+        {
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                       
+                        <h5 class="card-title">@item.Titre</h5>
+                        <p class="card-text">@item.Description</p>
+                        
+                        <a asp-controller="Cours" asp-action="Details" asp-route-id="@item.Idcours" class="btn btn-primary btn-lg " tabindex="-1" role="button" aria-disabled="true">Contenu</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

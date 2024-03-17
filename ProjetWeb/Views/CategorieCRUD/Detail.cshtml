@@ -1,0 +1,117 @@
+﻿@using BLL;
+@model List<Models.Cours.ListCoursVM>
+<style>
+    tbody {
+        height: 80px; /* Hauteur de la zone d'affichage */
+        overflow: auto; /* Activation du scroll */
+    }
+
+    .fixed-button-right {
+        position: fixed;
+        right: 20px; /* Ajustez la distance par rapport au bord droit selon vos préférences */
+        bottom: 20px; /* Ajustez la distance par rapport au bas pour le premier bouton */
+        z-index: 1000; /* Assurez-vous que le bouton reste au-dessus du contenu du tableau */
+    }
+
+    .fixed-button-right-top {
+        position: fixed;
+        right: 20px; /* Ajustez la distance par rapport au bord droit selon vos préférences */
+        bottom: 60px; /* Ajustez la distance par rapport au bas pour le deuxième bouton */
+        z-index: 1000; /* Assurez-vous que le bouton reste au-dessus du contenu du tableau */
+    }
+</style>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de Bord Administrateur</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+    <div class="container text-center">
+        <h2>@ViewData["TitrePage"]  </h2>
+        
+
+        <div class="row">
+
+            <div class="col-md-4 offset-md-4"><h4>Total: @ViewBag.countcat</h4></div>
+        </div>
+
+
+    </div>
+    <form asp-controller="Admin" asp-action="Logout" method="post">
+
+        <button type="submit" class="btn btn-primary btn-sm">Se déconnecter</button>
+    </form>
+
+
+   
+
+        <div class="row mt-3">
+            <div class="col-md-12">
+                <a asp-controller="CoursCRUD" asp-action="Create" class="btn btn-success mb-2 fixed-button-right-top"> Ajouter un cours </a>
+                <a asp-controller="CoursCRUD" asp-action="Index" class="btn btn-success mb-2 fixed-button-right" tabindex="-1" role="button" aria-disabled="true">Liste Cours </a>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            
+                            <th>Cours</th>
+                            <th>Descriprtion</th>
+                            <th>Contenu</th>
+
+                            <th>Categorie</th>
+                         <th>Operations</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var cours in Model)
+                        {
+
+                            <tr>
+                              
+                                <td>@cours.Titre</td>
+                                <td>@cours.Description</td>
+                                <td>@cours.Etapes</td>
+
+
+                             
+
+                            <td>
+                                @{
+                                    // Ajoutez ici le code pour récupérer et afficher le nom de la catégorie
+                                    CoursService BLL = new CoursService();
+                                    string categorieName = BLL.Nomcat(cours.Idcours);
+                                }
+                                @categorieName
+                            </td>
+
+
+                            <td>
+                                <div class="mb-2 mt-2">
+                                <a asp-controller="Commentaire" asp-action="ListAdmin" asp-route-id="@cours.Idcours" class="btn btn-primary btn-sm">Commentaires</a> </div>
+                                <div class="mb-2 mt-2">
+                                <a asp-controller="CoursCRUD" asp-action="RecupererModelEdit" asp-route-id="@cours.Idcours" class="btn btn-primary btn-sm">Editer</a> </div>
+                                <div class="mb-2 mt-2">
+                                <a asp-controller="CoursCRUD" asp-action="Delete" asp-route-id="@cours.Idcours" class="btn btn-danger btn-sm">Supprimer</a> </div>
+                            </td>
+
+
+
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            <div class="container text-center">
+                <h2>@ViewData["null"]</h2>
+            </div>
+            </div>
+        </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ProjetWeb
+build_property.RootNamespace = ProjetWeb
+build_property.ProjectDir = C:\Users\salma\OneDrive\Bureau\4eme annee\SolutionWeb\ProjetWeb\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\salma\OneDrive\Bureau\4eme annee\SolutionWeb\ProjetWeb
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/salma/OneDrive/Bureau/4eme annee/SolutionWeb/ProjetWeb/Views/Admin/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/salma/OneDrive/Bureau/4eme annee/SolutionWeb/ProjetWeb/Views/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/salma/OneDrive/Bureau/4eme annee/SolutionWeb/ProjetWeb/Views/CategorieCRUD/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllQ1JVRFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/salma/OneDrive/Bureau/4eme annee/SolutionWeb/ProjetWeb/Views/CategorieCRUD/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllQ1JVRFxEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/salma/OneDrive/Bureau/4eme annee/SolutionWeb/ProjetWeb/Views/CategorieCRUD/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllQ1JVRFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/salma/OneDrive/Bureau/4eme annee/SolutionWeb/ProjetWeb/Views/CategorieCRUD/RecupererIdEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllQ1JVRFxSZWN1cGVyZXJJZEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/salma/OneDrive/Bureau/4eme annee/SolutionWeb/ProjetWeb/Views/Categorie/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/salma/OneDrive/Bureau/4eme annee/SolutionWeb/ProjetWeb/Views/Categorie/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllXExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/salma/OneDrive/Bureau/4eme annee/SolutionWeb/ProjetWeb/Views/Commentaire/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbWVudGFpcmVcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/salma/OneDrive/Bureau/4eme annee/SolutionWeb/ProjetWeb/Views/Commentaire/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbWVudGFpcmVcTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/salma/OneDrive/Bureau/4eme annee/SolutionWeb/ProjetWeb/Views/Commentaire/ListAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbWVudGFpcmVcTGlzdEFkbWluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/salma/OneDrive/Bureau/4eme annee/SolutionWeb/ProjetWeb/Views/CoursCRUD/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNDUlVEXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/salma/OneDrive/Bureau/4eme annee/SolutionWeb/ProjetWeb/Views/CoursCRUD/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNDUlVEXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/salma/OneDrive/Bureau/4eme annee/SolutionWeb/ProjetWeb/Views/CoursCRUD/RecupererModelEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNDUlVEXFJlY3VwZXJlck1vZGVsRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/salma/OneDrive/Bureau/4eme annee/SolutionWeb/ProjetWeb/Views/Cours/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/salma/OneDrive/Bureau/4eme annee/SolutionWeb/ProjetWeb/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/salma/OneDrive/Bureau/4eme annee/SolutionWeb/ProjetWeb/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/salma/OneDrive/Bureau/4eme annee/SolutionWeb/ProjetWeb/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/salma/OneDrive/Bureau/4eme annee/SolutionWeb/ProjetWeb/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/salma/OneDrive/Bureau/4eme annee/SolutionWeb/ProjetWeb/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/salma/OneDrive/Bureau/4eme annee/SolutionWeb/ProjetWeb/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-mm8x9xo3g1

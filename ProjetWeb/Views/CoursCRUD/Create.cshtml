@@ -1,0 +1,62 @@
+﻿@model Models.Cours.ListCoursVM
+
+
+
+<html>
+<head>
+   
+    <style>
+
+
+        form {
+            width: 500px; /* Largeur augmentée */ 
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box; /* Pour inclure le padding dans la largeur totale */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+            input[type="submit"] {
+                background-color: #4CAF50;
+                color: white;
+                cursor: pointer;
+            }
+
+                input[type="submit"]:hover {
+                    background-color: #45a049;
+                }
+    </style>
+</head>
+<body>
+
+    <form asp-controller="CoursCRUD" asp-action="Create" method="post">
+        <h1>@ViewData["Titre"]</h1>
+        Cours : <input asp-for="@Model.Titre" />
+        <br />
+        Description : <input asp-for="@Model.Description" />
+        <br />
+        Etapes : <input asp-for="@Model.Etapes" />
+        <br />
+        Categorie :
+        <select asp-for="Idcategorie"
+                asp-items="@(new SelectList(ViewBag.ListCate,"Idcategorie", "Titrecategorie"))">
+            <option>Categorie de cours</option>
+        </select>
+
+        <input type="submit" value="Ajouter" />
+    </form>
+</body>
+</html>

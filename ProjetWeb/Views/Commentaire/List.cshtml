@@ -1,0 +1,71 @@
+﻿@using BLL;
+@model List<Models.Commentaire.ListCommentaireVM>
+
+
+
+<head>
+    <style>
+        .comment-section {
+            margin-top: 20px;
+        }
+
+        .comment {
+            border-bottom: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        .comment-content {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        .comment-form {
+            margin-top: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+    </style>
+
+    
+
+</head>
+<div class="container text-center">
+
+
+    <h1>@ViewData["Liste"]</h1>
+    <a asp-controller="Cours" asp-action="Details" asp-route-id="@ViewBag.cours" class="btn btn-primary btn-lg" role="button" aria-disabled="true">Retourner au cours</a>
+    
+    </div>
+
+   
+    <br />
+ 
+    @foreach (var item in Model)
+    {
+        <div class="comment">
+            <h4>@item.Nomuser</h4>
+            <br>
+            <p>@item.Description</p>
+            <td> Cours:
+                @{
+                    // Ajoutez ici le code pour récupérer et afficher le nom de la catégorie
+                    CommentaireService BLL = new CommentaireService();
+                    string coursName = BLL.Nomcours(item.Idcommentaire);
+                }
+                @coursName
+            </td>
+         <br/>
+        <h6>@item.Date</h6> 
+        
+
+    </div>
+    }
+<div class="container text-center">
+<h3>@ViewData["null"]</h3>  </div>
+     
+   
+
+    

@@ -1,0 +1,51 @@
+﻿@model Models.Categorie.ListCategorieVM
+
+
+
+<html>
+<head>
+    <title>Ajouter Catégorie</title>
+    <style>
+
+
+        form {
+            width: 500px; /* Largeur augmentée */
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box; /* Pour inclure le padding dans la largeur totale */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+            input[type="submit"] {
+                background-color: #4CAF50;
+                color: white;
+                cursor: pointer;
+            }
+
+                input[type="submit"]:hover {
+                    background-color: #45a049;
+                }
+    </style>
+</head>
+<body>
+
+    <form asp-controller="CategorieCRUD" asp-action="Create" method="post">
+        <h1>Ajouter categorie</h1>
+        Categorie : <input asp-for="@Model.Titrecategorie" />
+        <input type="submit" value="Ajouter" />
+    </form>
+</body>
+</html>

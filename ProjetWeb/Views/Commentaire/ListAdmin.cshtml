@@ -1,0 +1,109 @@
+﻿@using BLL;
+@model List<Models.Commentaire.ListCommentaireVM>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de Bord Administrateur</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        tbody {
+            height: 80px; /* Hauteur de la zone d'affichage */
+            overflow: auto; /* Activation du scroll */
+        }
+
+        .fixed-button-right {
+            position: fixed;
+            right: 20px; /* Ajustez la distance par rapport au bord droit selon vos préférences */
+            bottom: 20px; /* Ajustez la distance par rapport au bas pour le premier bouton */
+            z-index: 1000; /* Assurez-vous que le bouton reste au-dessus du contenu du tableau */
+        }
+
+        .fixed-button-right-top {
+            position: fixed;
+            right: 20px; /* Ajustez la distance par rapport au bord droit selon vos préférences */
+            bottom: 60px; /* Ajustez la distance par rapport au bas pour le deuxième bouton */
+            z-index: 1000; /* Assurez-vous que le bouton reste au-dessus du contenu du tableau */
+        }
+    </style>
+
+</head>
+<body class="bg-light">
+ 
+        <div class="row">
+            <div class="container text-center">
+                <h2>@ViewData["Titre"]  </h2>
+                <div class="row">
+
+                <div class="col-md-4 offset-md-4"><h4>Total: @ViewBag.countparcours</h4></div>
+                </div>
+
+
+            </div>
+        <form asp-controller="Admin" asp-action="Logout" method="post">
+
+            <button type="submit" class="btn btn-primary btn-sm">Se déconnecter</button>
+        </form>
+
+
+        <div class="row mt-3">
+            <div class="col-md-12">
+             
+                <a asp-controller="CoursCRUD" asp-action="Index" class="btn btn-success mb-2  fixed-button-right" tabindex="-1" role="button" aria-disabled="true"> Liste des cours </a>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                               <th>Commentaire</th>
+                                <th>Nom proprietaire</th>
+                                <th>Cours</th>
+
+                                <th>Date</th>
+                                <th></th>
+
+                            </tr>
+                        </thead>
+
+
+
+                        <tbody>
+                            @foreach (var comment in Model)
+                            {
+
+                                <tr>
+                                    
+                                    <td>@comment.Description</td>
+                                    <td>@comment.Nomuser</td>
+                                    <td>
+                                    @{
+                                        // Ajoutez ici le code pour récupérer et afficher le nom de la catégorie
+                                        CommentaireService BLL = new CommentaireService();
+                                            string coursName = BLL.Nomcours(comment.Idcommentaire);
+                                  }
+                                        @coursName
+                                    </td>
+                                    <td>@comment.Date</td>
+
+
+
+
+
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                    <div class="container text-center">
+                        <h2>@ViewData["null"]</h2>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
